@@ -96,7 +96,8 @@ fun RecipeScreen(modifier: Modifier,viewModel: MealViewModel = viewModel()) {
 
             }
             is MealViewModel.MealState.Error -> {
-
+                val errorMessage = (mealState as MealViewModel.MealState.Error).errorMessage
+                Text("Error: $errorMessage", fontSize = 20.sp)
             }
         }
     }
